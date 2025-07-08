@@ -92,6 +92,7 @@ main {
 
 .input-wrapper input[type="button"] {
     all: unset;
+    text-align: center;
     background-color: var(--brand-color);
     padding: .75rem 1.5rem;
     border-radius: .75rem;
@@ -106,8 +107,9 @@ main {
 
 .buying-list {
     overflow-y: auto;
-    height: 14.5rem;
+    color: var(--content-secondary);
     flex-direction: column;
+    height: 14.5rem;
     padding-inline: .75rem;
     padding-block: .5rem;
     margin-bottom: 2.25rem;
@@ -137,6 +139,7 @@ main {
 .inner-wrapper {
     margin-bottom: .75rem;
     height: 2.5rem;
+    font-weight: 500;
 }
 
 .label-wrapper {
@@ -151,10 +154,11 @@ main {
 
 .warning-box {
     background-color: var(--danger-color);
+    color: var(--bg-secondary);
     border-radius: .75rem;
     padding: .75rem;
     gap: .5rem;
-    color: var(--bg-secondary);
+    margin-bottom: 8.56rem;
 
     & .label-wrapper {
         font-weight: 600;
@@ -184,4 +188,26 @@ main {
 
 .js-center {
     justify-self: center;
+}
+
+@media (width <= 37.5rem) {
+    main {
+        width: 20.5rem;
+    }
+
+    .input-wrapper {
+        flex-wrap: wrap;
+
+        & input[type="button"] {
+            width: 100%;
+        }
+    }
+
+    .inner-wrapper {
+        padding: .75rem;
+    }
+
+    .warning-box {
+        margin-bottom: 10.62rem;
+    }
 }
